@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Downloads/vacation-master/vacation-master/css"
+		},
+		{
+			"path": "../../../Downloads/vacation-master/vacation-master/fonts"
+		},
+		{
+			"path": "../../../Downloads/vacation-master/vacation-master/images"
+		},
+		{
+			"path": "../../../Downloads/vacation-master/vacation-master/js"
+		},
+		{
+			"path": "../../../Downloads/vacation-master/vacation-master/scss"
+		}
+	],
+	"settings": {}
+}
