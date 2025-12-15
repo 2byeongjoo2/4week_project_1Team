@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -27,9 +28,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+  <!-- 헤더 연결하기 -->
+    <header>
+    	<%@ include file="header.jsp" %>
+    </header>
+    <!-- //헤더 연결하기 -->
 		<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
-    <div class="hero-wrap js-fullheight" style="background-image: url('Recommende Destination.png');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/Recommend_Destination3.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -42,17 +47,24 @@
         </div>
       </div>
     </div>
-	<!-- //화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
 
-	<!-- 제철여행지도-->
-	<section>
-		<div>
-			<img src="Dec_travel_map.png" width="50%" height="800px" ><a></a>
-		</div>
-	</section>
+
+	<!-- 제철여행지도(이미지 넣고 동그라미 클릭시 하단에 해당 여행지 출력)-->
+	<section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-4">
+          		<div class="col-md-12 heading-section text-center ftco-animate">
+	          		<div  style="background-image: url('images/Dec_travel_map.png');background-size: contain;
+    							 background-repeat: no-repeat;height: 800px;">
+    					<div style="background-color:red;width:100px;height:100px;border-radius:50%;position:absolute;"></div>
+	          		</div>
+          		</div>
+        	</div>
+    	</div>
+    </section>
 	<!-- //제철여행지도-->
 
-	<!-- 여행지도 클릭시 생성(이달의 여행지)-->
+		<!-- 이달의 여행지-->
     <section class="ftco-counter img" id="section-counter">
     	<div class="container">
     		<div class="row d-flex">
@@ -75,8 +87,7 @@
         </div>
     	</div>
     </section>
-	<!-- //여행지도 클릭시 생성(이달의 여행지)-->
-
+		<!-- //이달의 여행지-->
 	<!-- 추천여행지 destination.html에서 발췌-->
 	 <section class="ftco-section">
     	<div class="container">
@@ -127,6 +138,13 @@
     </section>
 	<!-- //추천 여행지-->
 
+  </body>
+  <!-- footer 연결하기 -->
+    <footer>
+    	<%@ include file="footer.jsp" %>
+    </<footer>
+    <!-- //footer 연결하기 -->
+
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -148,5 +166,5 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
-  </body>
+
 </html>
