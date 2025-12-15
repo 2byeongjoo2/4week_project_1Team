@@ -3,44 +3,42 @@ const axios = require('axios');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
-
-// 🔐 너 인증키 (Decoding 키)
-const SERVICE_KEY = '0e8cd5b2189bce2f632b15da2403d84a067dcdbdab4eda33e95b457128d54026';
-
 app.use(cors());
 
-// 테스트용
-app.get('/', (req, res) => {
-  res.send('서버 정상 동작 중');
-});
+const PORT = 3000;
 
-// 🎯 축제 API 프록시
-app.get('/api/festivals', async (req, res) => {
+// ✅ Decoding 키 → 1회 인코딩
+const RAW_KEY =
+  '0e8cd5b2189bce2f632b15da2403d84a067dcdbdab4eda33e95b457128d54026';
+const SERVICE_KEY = encodeURIComponent(RAW_KEY);
+
+app.get('/api/festival', async (req, res) => {
+  console.log('✓ /api/festival 요청 들어옴');
+
   try {
     const response = await axios.get(
-      'https://apis.data.go.kr/B551011/KorService1/searchFestival1',
+      'https://apis.data.go.kr/B551011/KorService/searchFestival',
       {
         params: {
           serviceKey: SERVICE_KEY,
           MobileOS: 'ETC',
-          MobileApp: 'FestivalApp',
-          _type: 'json',
-          eventStartDate: '20250401',
-          numOfRows: 10,
-          pageNo: 1
-        }
+          MobileApp: 'FestivalTest',
+          _type: 'json'
+        },
+        timeout: 10000
       }
     );
 
+    console.log('✓ 공공데이터 응답 성공');
     res.json(response.data);
-  } catch (error) {
-    console.error('API ERROR:', error.message);
+
+  } catch (err) {
+    console.error('✗ API 호출 실패');
+    console.error(err.response?.data || err.message);
     res.status(500).json({ error: 'API 호출 실패' });
   }
 });
 
-// 서버 실행
 app.listen(PORT, () => {
-  console.log(`✅ 서버 실행 중: http://localhost:${PORT}`);
+  console.log(`🚀 서버 실행중 http://localhost:${PORT}`);
 });
