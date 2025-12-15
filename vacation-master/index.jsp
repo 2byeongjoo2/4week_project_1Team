@@ -54,9 +54,15 @@
     	<div class="container">
     		<div class="row justify-content-center pb-4">
           		<div class="col-md-12 heading-section text-center ftco-animate">
-	          		<div  style="background-image: url('images/Dec_travel_map.png');background-size: contain;
-    							 background-repeat: no-repeat;height: 800px;">
-    					<div style="background-color:red;width:100px;height:100px;border-radius:50%;position:absolute;"></div>
+	          		<div>
+    					<div style="background-image: url('images/Dec_travel_map.png');background-size: contain;
+    							 background-repeat: no-repeat;background-position:center;height: 800px;">
+    						<div style="background-color:red;width:80px;height:80px;border-radius:50%;position:absolute;left:422px;top:216px;">파라다이스</div>
+    						<div style="background-color:orange;width:80px;height:80px;border-radius:50%;position:absolute;left:603px;top:192px;">나무향기한증막</div>
+    						<div style="background-color:yellow;width:80px;height:80px;border-radius:50%;position:absolute;left:694px;top:232px;">대관령자연휴양림</div>
+    						<div style="background-color:green;width:80px;height:80px;border-radius:50%;position:absolute;left:508px;top:304px;">초정행궁</div>
+    						<div style="background-color:blue;width:80px;height:80px;border-radius:50%;position:absolute;left:404px;top:374px;">대전근현대사전시관</div>
+    					</div>
 	          		</div>
           		</div>
         	</div>
