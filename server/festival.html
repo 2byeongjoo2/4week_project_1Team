@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vacation - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    
+    <!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/Festival.png');" data-stellar-background-ratio="0.5">
+    </div>
+
+    <!-- 추천 여행 검색 -->
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="search-wrap-1 ftco-animate p-4">
+
+              <!-- ✅ [수정1] id 추가 -->
+              <form id="searchForm" action="#" class="search-property-1">
+                <div class="row">
+
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label for="#">언제</label>
+                      <div class="form-field">
+                        <div class="select-wrap">
+                          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+
+                          <!-- ✅ [수정2] id + value(비교 가능하게) -->
+                          <select id="seasonSelect" class="form-control">
+                        <option value="">전체</option>
+                        <option value="봄">봄</option>
+                        <option value="여름">여름</option>
+                        <option value="가을">가을</option>
+                        <option value="겨울">겨울</option>
+                        </select>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label for="#">어디로</label>
+                      <div class="form-field">
+                        <div class="select-wrap">
+                          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+
+                          <!-- ✅ [수정2] id + value(비교 가능하게) -->
+                          <select id="regionSelect" class="form-control">
+                            <option value="">전체</option>
+                            <option value="서울">서울</option>
+                            <option value="경기도">경기도</option>
+                            <option value="강원도">강원도</option>
+                            <option value="충청도">충청도</option>
+                            <option value="경상도">경상도</option>
+                            <option value="전라도">전라도</option>
+                          </select>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg align-self-end">
+                    <div class="form-group">
+                      <div class="form-field">
+                        <input type="submit" value="검색" class="form-control btn btn-primary">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+              <!-- //form -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //추천 여행 검색 -->
+
+    <!-- 정렬 버튼 영역 -->
+    <div id="sort-area" class="text-center mb-5" style="display:none;">
+      <button class="btn btn-outline-primary mr-2" data-sort="default">기본순</button>
+      <button class="btn btn-outline-danger mr-2" data-sort="likes">좋아요순</button>
+      <button class="btn btn-outline-info" data-sort="upcoming">곧 시작</button>
+    </div>
+
+    <!-- 안내 메시지 -->
+    <div id="message-area" class="text-center my-5">
+      <p>🎯 떠날 준비가 되셨나요?</p>
+      <p>위에서 조건을 선택하고 검색 버튼을 눌러주세요!</p>
+    </div>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row" id="festival-result">
+          <!-- JS로 카드가 여기 들어올 예정 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    <!-- ✅ 템플릿 기본 JS들 (원래 유지) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- ✅ [수정3] festival.js를 맨 마지막에 -->
+    <script src="js/festival.js"></script>
+    
+  </body>
+</html>
