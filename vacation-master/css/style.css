@@ -5288,7 +5288,7 @@ button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
 .bg-dark {
-  background-color: #343a40 !important; }
+  background-color: #fff !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
@@ -8027,17 +8027,16 @@ h1, h2, h3, h4, h5,
   color: #f9ab30 !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
   position: absolute;
   top: -8px;
   left: 0;
   right: 0;
-  z-index: 3; 
-  border-bottom: 2px solid red; /*지울것.*/
+  z-index: 3;
+  background: #fff;
 }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      background: #fff !important;
       position: relative;
       top: 0;
       padding-top: 0;
@@ -8049,8 +8048,7 @@ h1, h2, h3, h4, h5,
     padding: 0; }
   .ftco-navbar-light .navbar-brand {
     color: #fff;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem; }
+    }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-brand {
         color: #fff;
@@ -8069,7 +8067,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 1.5rem;
       padding-left: 20px;
       padding-right: 20px;
-      color: #fff;
+      color: #000;
       font-weight: 400;
       opacity: 1 !important; }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover, .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:focus {
@@ -8216,12 +8214,16 @@ h1, h2, h3, h4, h5,
       padding-bottom: 1rem; }
 
 .navbar-brand {
+	width: 170px;
   font-weight: 700;
   font-size: 24px;
-  background: #33313b;
+  background: #fff;
   padding: 0 1em;
   line-height: 1.2;
   text-align: center; }
+  .navbar-brand img{
+  width: 100%;
+  }
   .navbar-brand span {
     font-size: 12px;
     font-weight: 600;
@@ -9492,3 +9494,44 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    
+/* 세진 작성 css ------------------------------------------------------------*/
+/* header */
+.gnb > ul {
+	background-color: #f1f9ff;
+	border-radius: 21px;
+	padding: 5px 15px 5px 20px;
+	gap: 10px;
+	line-height: 32px;
+}
+.gnb > ul > li > a {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+.gnb > ul > li > a > img {
+	width: 70%;
+}
+.gnb > ul > li > a > img.widthpercent{
+	width: 85%;
+}
+/*my trip*/
+.heading{
+	display: flex;
+	align-items: center;
+	gap:10px;
+}
+.heading .heartIcon{
+	display: inline-block;
+    padding: 1px 5px 0px;
+    border: 1px solid #ddd;
+    border-radius: 25%;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+.mytripsect:not(:last-child) {
+	margin-bottom: 20px;
+}
