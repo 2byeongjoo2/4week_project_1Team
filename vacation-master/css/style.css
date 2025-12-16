@@ -8710,8 +8710,8 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  background: #201e25;
-  padding: 7em 0;
+  background: #fbc97a66;
+  padding: 2em 0;
   z-index: 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
@@ -8732,8 +8732,7 @@ textarea.form-control {
     .ftco-footer .ftco-footer-widget .btn-primary:hover {
       background: #fff;
       border: 2px solid #fff !important; }
-  .ftco-footer p {
-    color: rgba(255, 255, 255, 0.7); }
+
   .ftco-footer a {
     color: rgba(255, 255, 255, 0.7); }
     .ftco-footer a:hover {
@@ -9501,7 +9500,7 @@ textarea.form-control {
 .gnb > ul {
 	background-color: #f1f9ff;
 	border-radius: 21px;
-	padding: 5px 15px 5px 20px;
+	padding: 5px 13px 5px 20px;
 	gap: 10px;
 	line-height: 32px;
 }
@@ -9512,9 +9511,6 @@ textarea.form-control {
 }
 .gnb > ul > li > a > img {
 	width: 70%;
-}
-.gnb > ul > li > a > img.widthpercent{
-	width: 85%;
 }
 /*my trip*/
 .heading{
@@ -9534,4 +9530,26 @@ textarea.form-control {
 }
 .mytripsect:not(:last-child) {
 	margin-bottom: 20px;
+}
+/*footer*/
+footer .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+}
+footer .container img {
+	width: 25%;
+}
+footer .container p {
+    color: #f97a3b; 
+    font-size: 30px;
+    font-weight: 500;
+}
+footer .container p:last-child{
+	color: #a7a4a4;
+	font-size: 15px;
+	font-style: italic;
+	text-align: center;
+	font-weight: 400;
 }
